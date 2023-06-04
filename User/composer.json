@@ -1,0 +1,25 @@
+{
+    "name": "vagnerlg/user",
+    "autoload": {
+        "psr-4": {
+            "Application\\": "src/Application",
+            "Domain\\": "src/Domain",
+            "Infrastructure\\": "src/Infrastructure"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vagner Gonçalves"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "ext-mongodb": "^1.15.0",
+        "mongodb/mongodb": "^1.15",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "php-di/php-di": "^7.0",
+        "respect/validation": "^2.2",
+        "psy/psysh": "@stable"
+    }
+}

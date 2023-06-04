@@ -11,7 +11,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
-      - ./Mongo/.infra/mongo:/data/db
+      - ./.infra/mongo:/data/db
 
   mongo-express:
     image: mongo-express
@@ -31,3 +31,10 @@ services:
       - ./Order:/usr/src/app
     ports:
       - 3000:3000
+  
+  php:
+    build: ./User/.infra
+    volumes:
+      - ./User:/var/www/html/
+    ports:
+      - 8000:80
